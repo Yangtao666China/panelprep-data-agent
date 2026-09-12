@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="370" viewBox="0 0 1280 370" role="img" aria-labelledby="title desc">
+<title id="title">PanelPrep</title><desc id="desc">Input tables, reviewed plans, verified joins, auditable research bundles.</desc>
+<rect width="1280" height="370" rx="24" fill="#14213d"/><path d="M0 300L1280 80M0 370L1280 150" stroke="#24355b"/>
+<rect x="54" y="49" width="46" height="46" rx="12" fill="#8b9fff"/><path d="M68 63v21m15-21v7c0 7-15 4-15 11" stroke="#14213d" stroke-width="3" fill="none"/>
+<text x="117" y="84" fill="#fff" font-size="40" font-weight="700" font-family="system-ui,sans-serif">PanelPrep</text>
+<text x="56" y="148" fill="#e4eafa" font-size="28" font-family="system-ui,sans-serif">Every merge should be explainable.</text>
+<text x="56" y="189" fill="#a7b7d7" font-size="19" font-family="system-ui,sans-serif">Auditable panel data preparation · AI-assisted planning · Independent reproduction</text>
+<g font-family="system-ui,sans-serif" font-size="18" fill="#e4eafa">
+<rect x="56" y="241" width="242" height="69" rx="12" fill="#22345b"/><text x="78" y="270">01  Input tables</text><text x="78" y="295" font-size="14" fill="#a7b7d7">Preserve IDs and source records</text>
+<rect x="364" y="241" width="242" height="69" rx="12" fill="#22345b"/><text x="386" y="270">02  Reviewed plan</text><text x="386" y="295" font-size="14" fill="#a7b7d7">Explicit keys and sample rules</text>
+<rect x="672" y="241" width="242" height="69" rx="12" fill="#22345b"/><text x="694" y="270">03  Verified joins</text><text x="694" y="295" font-size="14" fill="#a7b7d7">Track matches and attrition</text>
+<rect x="980" y="241" width="242" height="69" rx="12" fill="#344b8a"/><text x="1002" y="270">04  Research bundle</text><text x="1002" y="295" font-size="14" fill="#c7d4f2">Audit + Python reproduction</text>
+</g><g fill="#8b9fff" font-size="27" font-family="system-ui,sans-serif"><text x="320" y="283">→</text><text x="628" y="283">→</text><text x="936" y="283">→</text></g></svg>

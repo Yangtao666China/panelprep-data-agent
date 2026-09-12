@@ -1,0 +1,24 @@
+{
+  "tool": "PanelPrep",
+  "version": "0.1.0",
+  "createdAt": "2026-09-12T00:00:00.000Z",
+  "hashes": {
+    "parsed-inputs.json": "cc84b193e79ca29eb1778182a67283e559c8685ced0bb102f8f749c573921813",
+    "plan.json": "a5370b973cb90f4d81edc63a5ddd97e3ad2e5f9a1e991e7bf36d02ebd4efb541",
+    "expected.json": "fa9d9165e10be7330e127af4314d9eb55cb6cf9b88aaf29b4986c860977f4712"
+  },
+  "inputs": [
+    {
+      "id": "firms",
+      "name": "企业财务.csv",
+      "snapshot": "inputs/01.csv",
+      "sourceSha256": null
+    },
+    {
+      "id": "regions",
+      "name": "地区指标.csv",
+      "snapshot": "inputs/02.csv",
+      "sourceSha256": null
+    }
+  ]
+}

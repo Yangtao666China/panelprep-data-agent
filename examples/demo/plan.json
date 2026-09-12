@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "base": "firms",
+  "cleaning": [
+    {
+      "table": "firms",
+      "trim": [],
+      "missingTokens": [
+        "NA"
+      ],
+      "dropExactDuplicates": false,
+      "scales": []
+    },
+    {
+      "table": "regions",
+      "trim": [],
+      "missingTokens": [],
+      "dropExactDuplicates": false,
+      "scales": []
+    }
+  ],
+  "joins": [
+    {
+      "table": "regions",
+      "keys": [
+        {
+          "left": "region",
+          "right": "region"
+        },
+        {
+          "left": "year",
+          "right": "year"
+        }
+      ],
+      "how": "left",
+      "relationship": "many-to-one"
+    }
+  ],
+  "panel": {
+    "entity": [
+      "firm_id"
+    ],
+    "year": "year"
+  }
+}

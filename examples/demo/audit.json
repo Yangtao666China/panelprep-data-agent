@@ -1,0 +1,175 @@
+{
+  "ok": true,
+  "columns": [
+    "firm_id",
+    "year",
+    "region",
+    "revenue_wan",
+    "employees",
+    "regions__region",
+    "regions__year",
+    "gdp_yi"
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "unmatched_left",
+      "message": "地区指标.csv：2 条主表记录未匹配，已保留并填空。",
+      "count": 2
+    },
+    {
+      "severity": "warning",
+      "code": "null_key",
+      "message": "地区指标.csv：主表 1 条、辅助表 0 条记录缺少合并键。缺失键之间不会匹配。",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "code": "panel_gaps",
+      "message": "实体各自首尾年份之间共缺少 1 个年度观测；未自动补齐。",
+      "count": 1
+    }
+  ],
+  "flow": [
+    {
+      "step": "地区指标.csv",
+      "leftBefore": 12,
+      "rightRows": 11,
+      "matchedLeft": 10,
+      "unmatchedLeft": 2,
+      "unusedRight": 1,
+      "outputRows": 12,
+      "addedRows": 0,
+      "droppedLeft": 0,
+      "nullLeftKeys": 1,
+      "nullRightKeys": 0
+    }
+  ],
+  "unmatched": [
+    {
+      "step": "1: 地区指标.csv",
+      "side": "left",
+      "origins": {
+        "firms": [
+          11
+        ]
+      },
+      "values": {
+        "firm_id": "0004",
+        "year": "2022",
+        "region": "东北",
+        "revenue_wan": "810",
+        "employees": "46"
+      }
+    },
+    {
+      "step": "1: 地区指标.csv",
+      "side": "left",
+      "origins": {
+        "firms": [
+          12
+        ]
+      },
+      "values": {
+        "firm_id": "0005",
+        "year": "2021",
+        "region": null,
+        "revenue_wan": "420",
+        "employees": "28"
+      }
+    },
+    {
+      "step": "1: 地区指标.csv",
+      "side": "right",
+      "origins": {
+        "regions": [
+          12
+        ]
+      },
+      "values": {
+        "region": "华中",
+        "year": "2022",
+        "gdp_yi": "15900"
+      }
+    }
+  ],
+  "cleaningLog": [
+    {
+      "table": "firms",
+      "before": 12,
+      "after": 12,
+      "trimmed": 0,
+      "missing": 1,
+      "scaled": 0,
+      "duplicates": 0
+    },
+    {
+      "table": "regions",
+      "before": 11,
+      "after": 11,
+      "trimmed": 0,
+      "missing": 0,
+      "scaled": 0,
+      "duplicates": 0
+    }
+  ],
+  "panel": {
+    "entities": 5,
+    "minYear": 2020,
+    "maxYear": 2023,
+    "duplicateGroups": 0,
+    "missingYears": 1,
+    "invalidRows": 0,
+    "gaps": [
+      {
+        "entity": "0001",
+        "year": 2022
+      }
+    ]
+  },
+  "plan": {
+    "version": 1,
+    "base": "firms",
+    "cleaning": [
+      {
+        "table": "firms",
+        "trim": [],
+        "missingTokens": [
+          "NA"
+        ],
+        "dropExactDuplicates": false,
+        "scales": []
+      },
+      {
+        "table": "regions",
+        "trim": [],
+        "missingTokens": [],
+        "dropExactDuplicates": false,
+        "scales": []
+      }
+    ],
+    "joins": [
+      {
+        "table": "regions",
+        "keys": [
+          {
+            "left": "region",
+            "right": "region"
+          },
+          {
+            "left": "year",
+            "right": "year"
+          }
+        ],
+        "how": "left",
+        "relationship": "many-to-one"
+      }
+    ],
+    "panel": {
+      "entity": [
+        "firm_id"
+      ],
+      "year": "year"
+    }
+  }
+}
