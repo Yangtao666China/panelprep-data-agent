@@ -14,4 +14,4 @@ PanelPrep — 研究数据包
 
 限制：当前仅支持年度面板、精确键匹配、左/内连接和明确的十进制倍数换算。不自动推断企业/地区更名、币种、财年、名义实际值；不填补缺失、不自动聚合重复键、不做多对多合并。结果不是对经济识别假设的检验。
 
-AI：AI 仅用于提出经用户复核的方案。本包不包含 API 密钥。代码由 AI 辅助开发，源码和测试公开于 https://github.com/Yangtao666China/panelprep 。
+AI：AI 仅用于提出经用户复核的方案。本包不包含 API 密钥。代码由 AI 辅助开发，源码和测试公开于 https://github.com/Yangtao666China/panelprep-data-agent 。

@@ -1,15 +1,15 @@
 <img src="docs/banner.svg" alt="PanelPrep — auditable panel data preparation" width="100%">
 
-# PanelPrep
+# PanelPrep · AI 辅助面板数据整理
 
-[![CI](https://github.com/Yangtao666China/panelprep/actions/workflows/ci.yml/badge.svg)](https://github.com/Yangtao666China/panelprep/actions/workflows/ci.yml)
+[![CI](https://github.com/Yangtao666China/panelprep-data-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/Yangtao666China/panelprep-data-agent/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-indigo.svg)](LICENSE)
 
 **把企业表、地区表和年度指标合并成研究数据，并解释每一条样本的去向。**
 
 An auditable panel-data workbench: review an AI-proposed plan, execute explicit rules locally, and export an independently reproducible research bundle. No API key is required for the complete manual workflow.
 
-[English](#english-quick-start) · [处理语义](docs/methods.md) · [隐私与 AI](docs/privacy.md) · [合成示例](examples/demo) · [贡献](CONTRIBUTING.md)
+[在线试用](https://yangtao-panelprep.klasmoga878.chatgpt.site) · [English](#english-quick-start) · [处理语义](docs/methods.md) · [隐私与 AI](docs/privacy.md) · [合成示例](examples/demo) · [贡献](CONTRIBUTING.md)
 
 ## 解决一个具体问题
 
@@ -37,8 +37,8 @@ AI 不直接执行代码或修改数据。模型输出先通过结构和字段�
 需要 **Node.js 22.13+（推荐 24）**。测试和独立复现另需 Python 3.10+。
 
 ```sh
-git clone https://github.com/Yangtao666China/panelprep.git
-cd panelprep
+git clone https://github.com/Yangtao666China/panelprep-data-agent.git
+cd panelprep-data-agent
 npm ci
 npm run dev
 ```
@@ -51,7 +51,7 @@ npm run dev
 4. 点击结果行的来源按钮，再导出研究包。
 5. 解压后运行 `python reproduce.py --output reproduced`，检查 `verification.json`。
 
-也可以直接[下载合成示例研究包](https://github.com/Yangtao666China/panelprep/raw/refs/heads/main/examples/panelprep-demo.zip)，无需启动网页即可体验复现。自己的 Excel 文件请先另存为 CSV UTF-8。首次导入替换示例；**刷新或关闭页面会清空工作区，请先导出**。
+也可以直接[下载合成示例研究包](https://github.com/Yangtao666China/panelprep-data-agent/raw/refs/heads/main/examples/panelprep-demo.zip)，无需启动网页即可体验复现。自己的 Excel 文件请先另存为 CSV UTF-8。首次导入替换示例；**刷新或关闭页面会清空工作区，请先导出**。
 
 ### 可选 AI 助手
 

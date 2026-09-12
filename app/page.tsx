@@ -210,7 +210,7 @@ export default function Home() {
             使用说明
           </Button>
           <a
-            href="https://github.com/Yangtao666China/panelprep"
+            href="https://github.com/Yangtao666China/panelprep-data-agent"
             target="_blank"
             rel="noreferrer"
           >
